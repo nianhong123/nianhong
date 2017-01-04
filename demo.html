@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script>
+    window.onload = function(){
+    	var otext = document.getElementById('text');
+
+        var ali = document.getElementsByTagName('li');
+
+        for(var i=0;i<ali.length;i++){
+        	ali[i].index = i;
+        	ali[i].onclick = function(){
+        		otext.innerHTML=this.innerHTML
+        		console.log(this.innerHTML)
+
+        	}
+        }
+        // alert(ali.length)
+    }
+         
+
+	</script>
+</head>
+<body>
+	<p id="text">apple</p>
+	<ul>
+		<li>apple</li>
+		<li>orange</li>
+		<li>pear</li>
+	</ul>
+</body>
+</html>
